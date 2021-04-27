@@ -91,14 +91,15 @@ print(order_df.head(10))
 ```plantuml
 import pandas as pd
 order_df = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/order.csv")
-# Quick summary dari segi kuantitas, harga, freight value, dan weight
+#Quick summary dari segi kuantitas, harga, freight value, dan weight
 print(order_df.describe())
-# Median median dari total pembelian konsumen per transaksi
+#Median median dari total pembelian konsumen per transaksi
 print(order_df.loc[:, "price"].median())
 ```
 
 <details>
 <summary markdown="span">Output :</summary>
+        
 |      |    quantity |      price  |freight_value  |product_weight_gram|
 | :--  |     --:     |   :--:     |   :--:        |   --:     |  
 |count | 49999.000000 | 4.999900e+04 |  49999.000000   |      49980.000000|
