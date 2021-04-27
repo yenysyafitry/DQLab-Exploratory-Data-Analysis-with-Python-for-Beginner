@@ -356,8 +356,10 @@ plt.show()
 </br>
 <a href="https://academy.dqlab.id/main/livecode/163/311/1444">Link materi : academy.dqlab.id/main/livecode/163/311/1444</a>
 
-</br></br>
+
 ----
 
+<p></p>
+</br></br>
 
 <p align="center"><b>E-Sertifikat </b></br><img src="https://github.com/yenysyafitry/DQLab-Exploratory-Data-Analysis-with-Python-for-Beginner/blob/main/e-sertifikat.jpg"></p>
