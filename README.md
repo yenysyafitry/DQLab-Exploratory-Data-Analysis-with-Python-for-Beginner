@@ -66,7 +66,7 @@ print(order_df.head(10))
 <summary markdown="span">Output :</summary>
 
 |    |                  order_id       | ...|product_weight_gram|
-|:--:|                :--:             |:--:|   --:           |
+|:--:|                :--              |:--:|   :--           |
 | 0 | 2e7a8482f6fb09756ca50c10d7bfc047 | ...|           1800.0|
 | 1 |  2e7a8482f6fb09756ca50c10d7bfc047| ...|           1400.0|
 | 2 | e5fa5a7210941f7d56d0208e4e071d35 | ...|            700.0|
