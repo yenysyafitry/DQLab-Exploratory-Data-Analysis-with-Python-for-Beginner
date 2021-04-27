@@ -1,6 +1,6 @@
 ### Memanggil library di Python 
 <p align="justify"> Untuk mengimport library numpy dan pandas menggunakan alias np dan pd masing-masingnya</p>
-.
+
 ```plantuml
 import numpy as np
 import pandas as pd
