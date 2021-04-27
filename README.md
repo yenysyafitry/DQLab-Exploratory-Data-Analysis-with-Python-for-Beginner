@@ -1,9 +1,11 @@
 ### Memanggil library di Python 
-Untuk mengimport library numpy dan pandas menggunakan alias np dan pd masing-masingnya.
+<p align="justify"> Untuk mengimport library numpy dan pandas menggunakan alias np dan pd masing-masingnya</p>
+.
 ```plantuml
 import numpy as np
 import pandas as pd
 ```
+
 <details>
 <summary markdown="span">Output :</summary>
 In [1]: import numpy as np</br>
@@ -15,11 +17,13 @@ In [1]: import numpy as np</br>
 ----
 
 ### Tugas Praktek 
-Untuk mengimport dataset marketplace ABC dari order.csv dan disimpan ke dalam dataframe bernama order_df.
+<p align="justify"> Untuk mengimport dataset marketplace ABC dari order.csv dan disimpan ke dalam dataframe bernama order_df.</p>
+
 ```plantuml
 import pandas as pd
 order_df = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/order.csv")
 ```
+
 <details>
 <summary markdown="span">Output :</summary>
 In [1]: </br>
@@ -32,12 +36,14 @@ In [1]: </br>
 ----
 
 ### Tugas Praktek 
-Untuk order dataframe dengan menuliskan syntax Python untuk melihat struktur dari order_df dengan menggunakan fungsi shape
+<p align="justify"> Untuk order dataframe dengan menuliskan syntax Python untuk melihat struktur dari order_df dengan menggunakan fungsi shape</p>
+
 ```plantuml
 import pandas as pd
 order_df = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/order.csv")
 print(order_df.shape)
 ```
+
 <details>
 <summary markdown="span">Output :</summary>
 (49999, 12)
@@ -48,12 +54,14 @@ print(order_df.shape)
 ----
 
 ### Tugas Praktek 
-Untuk check bagaimana contoh data dari dataframe tersebut dengan fungsi head dengan limit 10 baris
+<p align="justify"> Untuk check bagaimana contoh data dari dataframe tersebut dengan fungsi head dengan limit 10 baris</p>
+
 ```plantuml
 import pandas as pd
 order_df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/order.csv")
 print(order_df.head(10))
 ```
+
 <details>
 <summary markdown="span">Output :</summary>
 
@@ -79,6 +87,7 @@ print(order_df.head(10))
 ----
 
 ### Tugas Praktek 
+
 ```plantuml
 import pandas as pd
 order_df = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/order.csv")
@@ -87,6 +96,7 @@ print(order_df.describe())
 # Median median dari total pembelian konsumen per transaksi
 print(order_df.loc[:, "price"].median())
 ```
+
 <details>
 <summary markdown="span">Output :</summary>
 |      |    quantity |      price  |freight_value  |product_weight_gram|
@@ -108,6 +118,7 @@ print(order_df.loc[:, "price"].median())
 ----
 
 ### Tugas Praktek 
+
 ```plantuml
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -116,6 +127,7 @@ order_df = pd.read_csv("https://dqlab-dataset.s3-ap-southeast-1.amazonaws.com/or
 order_df[["price"]].hist(figsize=(4, 5), bins=10, xlabelsize=8, ylabelsize=8)
 plt.show()  # Untuk menampilkan histogram plot
 ```
+
 <details>
 <summary markdown="span">Output :</summary>
 <img src="https://github.com/yenysyafitry/DQLab-Exploratory-Data-Analysis-with-Python-for-Beginner/blob/main/download.png">
@@ -126,6 +138,7 @@ plt.show()  # Untuk menampilkan histogram plot
 ----
 
 ### Tugas Praktek 
+
 ```plantuml
 import pandas as pd
 order_df = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/order.csv")
@@ -134,6 +147,7 @@ order_df.loc[:, "product_weight_gram"].std()
 # Varians kolom product_weight_gram
 order_df.loc[:, "product_weight_gram"].var()
 ```
+
 <details>
 <summary markdown="span">Output :</summary>
 In [1]: </br>
@@ -150,6 +164,7 @@ In [1]: </br>
 ----
 
 ### Tugas Praktek 
+
 ```plantuml
 import pandas as pd
 order_df = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/order.csv")
@@ -161,6 +176,7 @@ Q3 = order_df[["product_weight_gram"]].quantile(0.75)
 IQR = Q3 - Q1
 print(IQR)
 ```
+
 <details>
 <summary markdown="span">Output :</summary>
 product_weight_gram    1550.0</br>
@@ -172,6 +188,7 @@ dtype: float64
 ----
 
 ### Tugas Praktek 
+
 ```plantuml
 
 import pandas as pd
@@ -180,6 +197,7 @@ order_df = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/order.csv")
 order_df.rename(columns={"freight_value": "shipping_cost"}, inplace=True)
 print(order_df)
 ```
+
 <details>
 <summary markdown="span">Output :</summary>
 [49999 rows x 12 columns] 
@@ -190,6 +208,7 @@ print(order_df)
 ----
 
 ### Tugas Praktek 
+
 ```plantuml
 import pandas as pd
 order_df = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/order.csv")
@@ -197,6 +216,7 @@ order_df = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/order.csv")
 rata_rata = order_df["price"].groupby(order_df["payment_type"]).mean()
 print(rata_rata)
 ```
+
 <details>
 <summary markdown="span">Output :</summary>
 payment_type</br>
@@ -212,6 +232,7 @@ Name: price, dtype: float64
 ----
 
 ### Tugas Praktek 
+
 ```plantuml
 import pandas as pd
 order_df = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/order.csv")
@@ -219,6 +240,7 @@ order_df = pd.read_csv("https://storage.googleapis.com/dqlab-dataset/order.csv")
 sort_harga = order_df.sort_values(by="price", ascending=0)
 print(sort_harga)
 ```
+
 <details>
 <summary markdown="span">Output :</summary>
 
@@ -254,33 +276,33 @@ print(sort_harga)
 |21832 | c5f692a4e47f015faa3f8a9b9d36aa03 | ...   |             150.0|
 |10359 | 385bc274c4cbac59c0bb866c770588dc | ...   |             114.0|
 |3979  | f86b24a45dc34d1b7fcdeb817bf503da | ...   |           10075.0|
-|...    |                             ... | ...    |              ...
-|18925 | 468459668c11750c4d0a52b54045bf48 | ...    |            600.0
-|39733 | 1857ec1a182661136fe7584592437d51 | ...    |            925.0
-|28692 | 6649a190e9151aac8d553a45875d4b5e | ...    |            200.0
-|8895  | 1887b26eba419ce20f6fe34a6f88e80a | ...    |           3500.0
-|43479 | ab1a06760db3f8bd369582042ab2cf03 | ...   |             900.0
-|8617  | fb14d0b924669f4fedd4109bbbfbb736 | ...   |            1383.0
-|2122  | 77857b5f4745e31dcc0626a9326f6543 | ...   |           17200.0
-|4661  | d2c2a40d9d3d9479b0784a08930ebc75 | ...   |            6050.0
-|26336 | 0301ec492e902f2630234df285fa2a1b | ...   |             900.0
-|6791  | 8908c3c6b8591a4d779bc5a4abf4f951  |...   |             900.0
-|13504 | d3d5d98dda9bb549d81a9b4b9e404bc2 | ...    |            600.0
-|27080|  2e77e95ff07f298805637dfde7da4b4a | ...    |           8050.0
-|31174 | 9a0a6c39b6be7e1b0f796b6005d52ac4 | ...    |            160.0
-|18005 | f30e9b83b1b7557b48c20dc8cf2e383f | ...    |           1000.0
-|25105 | d4bc55bf7aa33f5d5d8b6b53d1e2eb8f | ...    |            417.0
-|46752 | 0e19aa2216bf89063fdd8849774aea19|  ...    |            200.0
-|9004  | 3462b9aa946649acaf4dbd05d3d61269 | ...    |           6550.0
-|47671 | a3c3508e603e9411b2b69972993bd079 | ...   |             525.0
-|22607 | 8d74231228bdbc2e89fc0125abfc1c87 | ...    |            536.0
-|8212  | 605a65763ded48a0db12fde2b0106a9b | ...    |           6400.0
-|22069 | 12d34cd89b0be0896cfecdbd41f5e952 | ...    |            600.0
-|41915  |1c8166cad99e5856dfb7d622902c623c | ...    |            500.0
-|42520|  b14b52f3d9077665df2361f007c8e6ec | ...    |            150.0
-|6850 |  faaf6a860e3ad876765787c9e1a93464 | ...    |            200.0
-|42025|  36cdcd48e9697951eef9c32ef39dc9f3 | ...    |            550.0
-|33786|  0d9e86e02c1a823b20c03ea29d616607 | ...    |           7550.0
+|...    |                             ... | ...    |              ...|
+|18925 | 468459668c11750c4d0a52b54045bf48 | ...    |            600.0|
+|39733 | 1857ec1a182661136fe7584592437d51 | ...    |            925.0|
+|28692 | 6649a190e9151aac8d553a45875d4b5e | ...    |            200.0|
+|8895  | 1887b26eba419ce20f6fe34a6f88e80a | ...    |           3500.0|
+|43479 | ab1a06760db3f8bd369582042ab2cf03 | ...   |             900.0|
+|8617  | fb14d0b924669f4fedd4109bbbfbb736 | ...   |            1383.0|
+|2122  | 77857b5f4745e31dcc0626a9326f6543 | ...   |           17200.0|
+|4661  | d2c2a40d9d3d9479b0784a08930ebc75 | ...   |            6050.0|
+|26336 | 0301ec492e902f2630234df285fa2a1b | ...   |             900.0|
+|6791  | 8908c3c6b8591a4d779bc5a4abf4f951  |...   |             900.0|
+|13504 | d3d5d98dda9bb549d81a9b4b9e404bc2 | ...    |            600.0|
+|27080|  2e77e95ff07f298805637dfde7da4b4a | ...    |           8050.0|
+|31174 | 9a0a6c39b6be7e1b0f796b6005d52ac4 | ...    |            160.0|
+|18005 | f30e9b83b1b7557b48c20dc8cf2e383f | ...    |           1000.0|
+|25105 | d4bc55bf7aa33f5d5d8b6b53d1e2eb8f | ...    |            417.0|
+|46752 | 0e19aa2216bf89063fdd8849774aea19|  ...    |            200.0|
+|9004  | 3462b9aa946649acaf4dbd05d3d61269 | ...    |           6550.0|
+|47671 | a3c3508e603e9411b2b69972993bd079 | ...   |             525.0|
+|22607 | 8d74231228bdbc2e89fc0125abfc1c87 | ...    |            536.0|
+|8212  | 605a65763ded48a0db12fde2b0106a9b | ...    |           6400.0|
+|22069 | 12d34cd89b0be0896cfecdbd41f5e952 | ...    |            600.0|
+|41915  |1c8166cad99e5856dfb7d622902c623c | ...    |            500.0|
+|42520|  b14b52f3d9077665df2361f007c8e6ec | ...    |            150.0|
+|6850 |  faaf6a860e3ad876765787c9e1a93464 | ...    |            200.0|
+|42025|  36cdcd48e9697951eef9c32ef39dc9f3 | ...    |            550.0|
+|33786|  0d9e86e02c1a823b20c03ea29d616607 | ...    |           7550.0|
 |42166 | 54220fcc516cabe9ec84b210c0765ef2 | ... |              1100.0|
 |31745 | 59a19c83ff825948739dd1601cc107b6 | ...  |              550.0|
 |42452|  9960ee97c2f8d801a200a01893b3942f|  ...  |             6663.0|
@@ -294,14 +316,14 @@ print(sort_harga)
 ----
 
 ### Tugas dari Andra 
-Berikut ya detailnya:
+<p align="justify"> Berikut ya detailnya:</br>
+Median price yang dibayar customer dari masing-masing metode pembayaran.</br>
+Tentukan metode pembayaran yang memiliki basket size (rataan median price) terbesar.</br>
+Ubah freight_value menjadi shipping_cost dan cari shipping_cost termahal dari data penjualan tersebut menggunakan sort.</br>
+Untuk product_category_name, berapa rata-rata weight produk tersebut dan standar deviasi mana yang terkecil dari weight tersebut,</br>
+Buat histogram quantity penjualan dari dataset tersebut untuk melihat persebaran quantity penjualan tersebut dengan bins = 5 dan figsize= (4,5)</br>
+Khusus poin 4, tolong diperhatikan lebih ya, Aksara karena hasil analisisnya akan digunakan kepala cabang dalam menyusun strategi free ongkir.</p>
 
-Median price yang dibayar customer dari masing-masing metode pembayaran.
-Tentukan metode pembayaran yang memiliki basket size (rataan median price) terbesar.
-Ubah freight_value menjadi shipping_cost dan cari shipping_cost termahal dari data penjualan tersebut menggunakan sort.
-Untuk product_category_name, berapa rata-rata weight produk tersebut dan standar deviasi mana yang terkecil dari weight tersebut,
-Buat histogram quantity penjualan dari dataset tersebut untuk melihat persebaran quantity penjualan tersebut dengan bins = 5 dan figsize= (4,5)
-Khusus poin 4, tolong diperhatikan lebih ya, Aksara karena hasil analisisnya akan digunakan kepala cabang dalam menyusun strategi free ongkir.
 ```plantuml
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -325,6 +347,7 @@ print(std_value.sort_values())
 order_df[["quantity"]].hist(figsize=(4, 5), bins=5)
 plt.show()
 ```
+
 <details>
 <summary markdown="span">Output :</summary>
 <img src="https://github.com/yenysyafitry/DQLab-Exploratory-Data-Analysis-with-Python-for-Beginner/blob/main/download (1).png">
@@ -333,3 +356,6 @@ plt.show()
 <a href="https://academy.dqlab.id/main/livecode/163/311/1444">Link materi : academy.dqlab.id/main/livecode/163/311/1444</a>
 
 ----
+
+
+<p align="center"><b>E-Sertifikat </b></br><img src="https://github.com/yenysyafitry/DQLab-Exploratory-Data-Analysis-with-Python-for-Beginner/blob/main/e-sertifikat.jpg"></p>
